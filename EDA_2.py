@@ -72,9 +72,14 @@ if data_file is not None:
     elif choice == "Sweetviz":
         #st.subheader("Profile Report of example dataset prepared using Sweetviz Library")
         df=pd.read_csv(data_file)
+        if st.button("Generate Sweetviz Report"):
+                report=sv.analyze(df)
+                report.show_html()
+                st_display_sweetviz("Sweetviz_Report_HTML")
+
         #st.dataframe(df.head())
-        report=sv.analyze(df)
-        report.show_html()
+        #report=sv.analyze(df)
+        #report.show_html()
             
     elif choice == "About":
                 st.subheader("About App")
@@ -92,5 +97,10 @@ else:
             
         elif choice2 == "Sweetviz":
             #st.subheader("Profile Report of example dataset prepared using Sweetviz Library")
-            report=sv.analyze(example2)
-            report.show_html()
+            if st.button("Generate Sweetviz Report"):
+                report=sv.analyze(df)
+                report.show_html()
+                st_display_sweetviz("Sweetviz_Report_HTML")
+
+            #report=sv.analyze(example2)
+            #report.show_html()
