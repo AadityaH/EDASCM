@@ -96,11 +96,8 @@ else:
             st_profile_report(pr)
             
         elif choice2 == "Sweetviz":
-            #st.subheader("Profile Report of example dataset prepared using Sweetviz Library")
             if st.button("Generate Sweetviz Report"):
                 report=sv.analyze(example2)
                 report.show_html()
                 st_display_sweetviz("SWEETVIZ_REPORT.html")
-
-            #report=sv.analyze(example2)
-            #report.show_html()
+             
