@@ -14,9 +14,6 @@ from streamlit_pandas_profiling import st_profile_report
 import codecs
 import streamlit.components.v1 as components
 import sweetviz as sv
-import dtale
-from dtale.app import get_instance
-from dtale.views import startup
 from streamlit_lottie import st_lottie
 import json
 import requests
@@ -68,14 +65,14 @@ if data_file is not None:
     if choice == "Pandas Profiling":
         #st.subheader("Profile Report of example dataset prepared using Pandas Profiling Library")
         df=pd.read_csv(data_file)
-        st.dataframe(df.head())
+        #st.dataframe(df.head())
         profile=ProfileReport(df)
         st_profile_report(profile)
     
     elif choice == "Sweetviz":
         #st.subheader("Profile Report of example dataset prepared using Sweetviz Library")
         df=pd.read_csv(data_file)
-        st.dataframe(df.head())
+        #st.dataframe(df.head())
         report=sv.analyze(df)
         report.show_html()
             
