@@ -75,7 +75,7 @@ if data_file is not None:
         if st.button("Generate Sweetviz Report"):
                 report=sv.analyze(df)
                 report.show_html()
-                st_display_sweetviz("Sweetviz_Report_HTML")
+                st_display_sweetviz("SWEETVIZ_REPORT.html")
 
         #st.dataframe(df.head())
         #report=sv.analyze(df)
@@ -98,9 +98,9 @@ else:
         elif choice2 == "Sweetviz":
             #st.subheader("Profile Report of example dataset prepared using Sweetviz Library")
             if st.button("Generate Sweetviz Report"):
-                report=sv.analyze(df)
+                report=sv.analyze(example2)
                 report.show_html()
-                st_display_sweetviz("Sweetviz_Report_HTML")
+                st_display_sweetviz("SWEETVIZ_REPORT.html")
 
             #report=sv.analyze(example2)
             #report.show_html()
